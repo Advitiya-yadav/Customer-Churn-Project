@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 st.set_page_config(
-    page_title="Customer Churn Prediction",
+    page_title="RetainAI – Telecom Customer Churn Prediction System",
     layout="centered"
 )
 
