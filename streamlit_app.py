@@ -11,7 +11,7 @@ st.set_page_config(
 model = joblib.load("model.pkl")
 features = joblib.load("features.pkl")
 
-st.title("Customer Churn Prediction 📉")
+st.title("RetainAI 📉")
 st.caption("Predict whether a customer is likely to churn")
 st.divider()
 
