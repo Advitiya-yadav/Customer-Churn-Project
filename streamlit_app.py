@@ -96,30 +96,6 @@ if st.button("Predict Churn", use_container_width=True):
     st.pyplot(fig)
     plt.close()
 
-    # Feature importance
-    st.subheader("🔍 What's Driving This Prediction")
-
-    importances = model.feature_importances_
-    feat_series = pd.Series(importances, index=features).sort_values(ascending=True).tail(8)
-
-    fig2, ax2 = plt.subplots(figsize=(6, 4))
-    fig2.patch.set_facecolor("#0e1117")
-    ax2.set_facecolor("#0e1117")
-
-    colors = ["#e05252" if prediction == "Yes" else "#52b788"] * len(feat_series)
-    bars = ax2.barh(feat_series.index, feat_series.values, color=colors, height=0.5)
-
-    ax2.set_xlabel("Importance", color="#aaaaaa")
-    ax2.tick_params(colors="#cccccc", labelsize=9)
-    ax2.spines[:].set_visible(False)
-    ax2.xaxis.label.set_color("#aaaaaa")
-    for spine in ax2.spines.values():
-        spine.set_visible(False)
-    ax2.tick_params(axis="x", colors="#aaaaaa")
-    ax2.tick_params(axis="y", colors="#cccccc")
-    st.pyplot(fig2)
-    plt.close()
-
     # Summary cards
     st.subheader("📋 Customer Summary")
     c1, c2, c3 = st.columns(3)
