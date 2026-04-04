@@ -117,7 +117,6 @@ if st.button("Predict Churn", use_container_width=True):
         spine.set_visible(False)
     ax2.tick_params(axis="x", colors="#aaaaaa")
     ax2.tick_params(axis="y", colors="#cccccc")
-
     st.pyplot(fig2)
     plt.close()
 
